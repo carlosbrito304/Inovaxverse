@@ -1,0 +1,257 @@
+/* Importando a fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos gerais para o body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  text-align: center;
+}
+
+/* Cabeçalho principal */
+header {
+  background-color: #0097b2; /* Fundo dourado */
+  color: #000; /* Texto preto */
+  text-align: center;
+  padding: 8px;
+  border-bottom: 3px solid #0097b2; /* Borda dourada */
+  position: relative;
+  display: flex; /* Flexbox para melhor alinhamento */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+}
+
+header h1 {
+  font-size: 36px;
+  color: #000; /* Preto */
+  margin: 0;
+}
+
+.Verificado {
+  width: 36px;
+  vertical-align: middle; /* Alinhamento vertical */
+  margin-left: 10px; /* Espaçamento entre o texto e a imagem */
+}
+
+/* Esteira de logos abaixo do cabeçalho */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Esconde a parte fora da área visível */
+  background-color: #000; /* Fundo preto */
+  border-bottom: 3px solid #0097b2; /* Borda dourada */
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-around;
+  animation: slide 20s linear infinite; /* Animação de rolagem infinita */
+}
+
+.carousel img {
+  width: 160px; /* Tamanho das logos na esteira */
+  height: auto;
+  padding: 3px;
+}
+
+/* Animação da esteira */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .Verificado {
+    width: 30px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  section h2, section h3 {
+    font-size: 24px;
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  ul li a {
+    font-size: 16px;
+  }
+}
+
+/* Seções adicionais */
+section {
+  margin: 20px 0;
+  padding: 20px;
+}
+
+section h2, section h3 {
+  color: #0097b2; /* Títulos com detalhes em dourado */
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+section p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #fff; /* Texto branco */
+}
+
+/* Lista de empresas */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 30px 0;
+}
+
+li strong {
+  font-size: 20px;
+  color: white; /* Nome das empresas em dourado */
+}
+
+li p {
+  color: #fff;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Estilo para as imagens dentro das listas */
+ul img {
+  display: block;
+  margin: 0 auto 10px auto;
+  width: 50px;
+}
+
+/* Links de redes sociais */
+ul li a {
+  text-decoration: none;
+  color: white; /* Links em dourado */
+  font-size: 18px;
+}
+
+ul li a:hover {
+  color: #fff; /* Links mudam para branco no hover */
+}
+
+/* Novo estilo para o contêiner das imagens */
+.image-container {
+  display: flex; /* Para alinhar as imagens lado a lado */
+  justify-content: center; /* Centraliza as imagens */
+  flex-wrap: wrap; /* Permite que as imagens quebrem a linha se necessário */
+  margin: 20px 0; /* Espaço acima e abaixo do contêiner */
+}
+
+.image-container img {
+  margin: 10px; /* Espaçamento em volta das imagens */
+  border-radius: 20px; /* Bordas mais arredondadas */
+  max-width: 30%; /* Limita a largura das imagens */
+  height: auto; /* Mantém a proporção da imagem */
+  transition: transform 0.3s; /* Transição suave */
+}
+
+.image-container img:hover {
+  transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
+}
+
+/* Estilo para a lista de empresas */
+.empresas-listas {
+  display: flex;
+  flex-direction: column; /* Organiza os itens da lista em coluna (imagem, nome, descrição) */
+  align-items: center; /* Centraliza os itens no container */
+  gap: 40px; /* Espaçamento entre cada item */
+  list-style-type: none; /* Remove os pontos da lista */
+  padding: 0; /* Remove o padding */
+}
+
+.empresas-listas li {
+  display: flex;
+  flex-direction: column; /* Organiza a imagem, nome e descrição verticalmente */
+  align-items: center; /* Centraliza os itens dentro de cada li */
+  text-align: center; /* Garante que o texto (nome e descrição) esteja centralizado */
+}
+
+.empresas-listas li img {
+  width: 300px; /* Define o tamanho das imagens */
+  height: auto; /* Mantém a proporção da imagem */
+  margin-bottom: 10px; /* Espaçamento entre a imagem e o nome */
+  border-radius: 15px; /* Arredonda as bordas das imagens */
+}
+
+/* Transição suave para as imagens */
+.empresas-listas img {
+  transition: transform 0.3s ease-in-out;
+  border-radius: 10px; /* Arredonda as bordas */
+}
+
+/* Efeito de hover nos itens da lista */
+.empresas-listas li:hover img {
+  transform: scale(1.05); /* Aumenta a imagem em 5% ao passar o mouse */
+}
+
+/* Adiciona transição suave também aos itens da lista, caso precise */
+ul li {
+  transition: transform 0.3s ease-in-out;
+}
+/* Estilo para a lista de empresas */
+.empresas-listas {
+  display: flex;
+  flex-direction: column; /* Organiza os itens da lista em coluna (imagem, nome, descrição) */
+  align-items: center; /* Centraliza os itens no container */
+  gap: 40px; /* Espaçamento entre cada item */
+  list-style-type: none; /* Remove os pontos da lista */
+  padding: 0; /* Remove o padding */
+  background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente transparente para a lista */
+  border-radius: 10px; /* Bordas arredondadas para a lista */
+  padding: 20px; /* Espaçamento interno na lista */
+}
+
+/* Para cada item da lista de empresas */
+.empresas-listas li {
+  display: flex;
+  flex-direction: column; /* Organiza a imagem, nome e descrição verticalmente */
+  align-items: center; /* Centraliza os itens dentro de cada li */
+  text-align: center; /* Garante que o texto (nome e descrição) esteja centralizado */
+  background-color: rgba(255, 255, 255, 0.2); /* Fundo levemente mais escuro para cada item */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 15px; /* Espaçamento interno */
+  transition: background-color 0.3s ease; /* Transição suave para a mudança de fundo */
+}
+
+/* Efeito de hover nas empresas */
+.empresas-listas li:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Fundo um pouco mais claro ao passar o mouse */
+}
+.redes-sociais {
+  display: flex; /* Usa flexbox para alinhar os itens */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  list-style-type: none; /* Remove os marcadores da lista */
+  padding: 0; /* Remove o padding padrão */
+}
+
+.redes-sociais li {
+  margin: 0 15px; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto dos links */
+}
+
+.redes-sociais img {
+  display: block; /* Garante que a imagem fique em bloco */
+  margin: 0 auto; /* Centraliza a imagem dentro do li */
+}
